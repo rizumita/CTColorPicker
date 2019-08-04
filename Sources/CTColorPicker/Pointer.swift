@@ -8,10 +8,17 @@
 import SwiftUI
 
 struct Pointer: View {
+    private struct Const {
+        static let length: CGFloat = 10.0
+        static let cornerRadius = length / 2.0
+        static let borderWidth: CGFloat = 2.0
+        static let borderColor: Color = .white
+    }
+    
     var body: some View {
-        RoundedRectangle(cornerRadius: 5.0)
-            .strokeBorder(Color.white, lineWidth: 2.0)
-            .frame(width: 10.0, height: 10.0, alignment: .center)
+        RoundedRectangle(cornerRadius: Const.cornerRadius)
+            .strokeBorder(Color.white, lineWidth: Const.borderWidth)
+            .frame(width: Const.length, height: Const.length, alignment: .center)
             .foregroundColor(.clear)
     }
 }

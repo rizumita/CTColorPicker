@@ -10,6 +10,7 @@ import CTColorPicker
 
 struct ContentView: View {
     @State private var color: UIColor = .red
+    
     var body: some View {
         VStack {
             ColorPicker(color: self.color) { color in
