@@ -1,3 +1,2 @@
 # CTColorPicker
-
-A description of this package.
+HSB ColorPicker for SwiftUI
