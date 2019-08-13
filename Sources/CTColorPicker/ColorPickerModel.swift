@@ -7,8 +7,11 @@
 
 import Foundation
 import SwiftUI
-import Combine
+#if canImport(Combine)
+    import Combine
+#endif
 
+@available(OSX 10.15, iOS 13.0, *)
 class ColorPickerModel: ObservableObject {
     var objectWillChange = PassthroughSubject<UIColor, Never>()
     var baseColor: Color {

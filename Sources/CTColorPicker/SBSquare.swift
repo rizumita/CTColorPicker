@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(OSX 10.15, iOS 13.0, *)
 struct SBSquare: View {
     struct Square: View {
         var body: some View {
@@ -62,7 +63,8 @@ struct SBSquare: View {
 }
 
 #if DEBUG
-struct SBTriangle_Previews: PreviewProvider {
+@available(OSX 10.15, iOS 13.0, *)
+struct SBSquare_Previews: PreviewProvider {
     static var previews: some View {
         SBSquare()
     }

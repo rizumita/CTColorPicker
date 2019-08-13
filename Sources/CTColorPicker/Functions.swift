@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(OSX 10.15, iOS 13.0, *)
 func getLength(_ geometry: GeometryProxy) -> CGFloat {
     min(geometry.size.width, geometry.size.height)
 }

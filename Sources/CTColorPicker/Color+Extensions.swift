@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+@available(OSX 10.15, iOS 13.0, *)
 extension Color {
     init(hex: String) {
         let v = Int("000000" + hex, radix: 16) ?? 0

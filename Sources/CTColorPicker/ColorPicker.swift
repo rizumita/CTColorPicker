@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
-import Combine
+#if canImport(Combine)
+    import Combine
+#endif
 
+@available(OSX 10.15, iOS 13.0, *)
 public struct ColorPicker: View {
     private let triangleScale: CGFloat
     private let model: ColorPickerModel
@@ -35,6 +38,7 @@ public struct ColorPicker: View {
 }
 
 #if DEBUG
+@available(OSX 10.15, iOS 13.0, *)
 struct ColorPicker_Previews: PreviewProvider {
     static var previews: some View {
         ColorPicker { _ in }

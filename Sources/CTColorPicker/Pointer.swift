@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(OSX 10.15, iOS 13.0, *)
 struct Pointer: View {
     private struct Const {
         static let length: CGFloat = 10.0
@@ -24,6 +25,7 @@ struct Pointer: View {
 }
 
 #if DEBUG
+@available(OSX 10.15, iOS 13.0, *)
 struct Pointer_Previews: PreviewProvider {
     static var previews: some View {
         Pointer()

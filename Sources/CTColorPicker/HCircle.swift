@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(OSX 10.15, iOS 13.0, *)
 struct HCircle: View {
     private let scale: CGFloat
     private var length: CGFloat = .zero
@@ -62,6 +63,7 @@ struct HCircle: View {
 }
 
 #if DEBUG
+@available(OSX 10.15, iOS 13.0, *)
 struct HCircle_Previews: PreviewProvider {
     static var previews: some View {
         HCircle()
