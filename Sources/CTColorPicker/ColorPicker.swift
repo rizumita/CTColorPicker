@@ -12,12 +12,12 @@ import SwiftUI
 
 @available(OSX 10.15, iOS 13.0, *)
 public struct ColorPicker: View {
-    private let triangleScale: CGFloat
+    private let squareScale: CGFloat
     private let model: ColorPickerModel
     private var cancellables = Set<AnyCancellable>()
     
-    public init(color: UIColor = .white, triangleScale: CGFloat = 0.8, onChange: @escaping (UIColor) -> ()) {
-        self.triangleScale = triangleScale
+    public init(color: UIColor = .white, squareScale: CGFloat = 0.8, onChange: @escaping (UIColor) -> ()) {
+        self.squareScale = squareScale
         self.model = ColorPickerModel(color: color)
         self.model.objectWillChange.sink(receiveValue: onChange).store(in: &cancellables)
     }
@@ -26,8 +26,8 @@ public struct ColorPicker: View {
         VStack {
             GeometryReader { geometry in
                 ZStack(alignment: .center) {
-                    HCircle(scale: self.triangleScale)
-                    SBSquare(scale: self.triangleScale)
+                    HCircle(scale: self.squareScale)
+                    SBSquare(scale: self.squareScale)
                 }
                 .frame(width: getLength(geometry),
                        height: getLength(geometry),
