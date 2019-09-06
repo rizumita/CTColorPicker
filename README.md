@@ -1,8 +1,6 @@
 # CTColorPicker
 HSB ColorPicker for SwiftUI
 
-![](https://github.com/rizumita/CTColorPicker/blob/screenshot/screenshot.png?raw=true)
-
 ## How to use
 
 ```swift
